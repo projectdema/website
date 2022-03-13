@@ -8,7 +8,7 @@
       </p>
     </div>
 
-    <form action="/" method="post">
+    <form action="/" method="post" autocomplete="off">
       <div class="container">
         <label for="uname">Identificação</label>
         <input
