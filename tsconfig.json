@@ -1,4 +1,7 @@
 { 
+  "compilerOptions": {
+    "module": "system"
+  },
   "files": [],
   "references": [
     {

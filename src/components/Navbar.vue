@@ -1,7 +1,7 @@
 <template>
   <div class="outter-navbar unselectable">
     <ul class="navbar">
-      <li class="brand rainbow"><span>project</span><span>Dema</span></li>
+      <li class="brand"><span>project</span><span>Dema</span></li>
 
       <template v-for="route in $router.options.routes" :key="route.path">
         <div v-if="route.name !== 'Login'">
@@ -15,12 +15,18 @@
           </li>
         </div>
       </template>
-
       <li style="float: right">
-        <button style="float: right" id="themeSwitch" onclick="toggleTheme()">
-          Switch
-        </button>
+        <div class="options">
+          <a>⚙️</a>
+          <div class="content">
+            <div class="inner">
+              <button id="themeSwitch" onclick="toggleTheme()"></button>
+              <a href="#">Link 2</a>
+            </div>
+          </div>
+        </div>
       </li>
+      
     </ul>
   </div>
 </template>

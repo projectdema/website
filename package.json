@@ -2,7 +2,7 @@
   "name": "projectdema-website",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 3000 --host",
     "test:unit": "vitest --environment jsdom",
@@ -12,6 +12,11 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@j-t-mcc/vue3-chartjs": "^1.3.0",
+    "@types/lodash": "^4.14.179",
+    "axios": "^0.26.1",
+    "chartjs": "^0.3.24",
+    "lodash": "^4.17.21",
     "material-icons": "^1.10.8",
     "vue": "^3.2.31",
     "vue-navigation-bar": "^4.1.0",
