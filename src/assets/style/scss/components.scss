@@ -1,0 +1,179 @@
+$red: #d83f41;
+$pastel: #42b883;
+$violet-blue: #565ecd;
+$ksu-purple: #8043cb;
+$font-family: 'Montserrat', sans-serif;
+
+.navbar {
+    -webkit-user-select: none;
+    -moz-user-select: none;   
+    -ms-user-select: none;    
+    user-select: none;
+    
+    margin: none;
+    padding: 2.5px 15px 0px 30px;
+
+
+    .itself {
+        list-style-type: none;
+        overflow: hidden;
+        background: var(--eerie);
+        border-radius: .5ch;
+        padding: 0 25px 0 25px;
+        box-shadow: 1px 2px 15px 2px rgba(0,0,0,.2);
+    
+        li {
+            float: left;
+            
+            .navbar-link {
+                text-align: center;
+                display: block;
+                padding: 14px 16px;
+                border-bottom: 0px transparent solid;
+                transition: opacity .2s ease-in-out;
+                
+                &.router-link-active {
+                    border-bottom: 2px solid var(--pastel);
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                &:hover {
+                    opacity: .75;
+                }
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            &.navbar-brand {
+                text-align: center;
+                padding: 14px 16px;
+                cursor: default;
+                font-weight: 600;
+                border-bottom: 2px solid transparent;
+
+                span:first-child {
+                    opacity: .75;
+                }
+                span:last-child {
+                    color: var(--violet-blue);
+                }
+            }
+
+            .options {
+                margin-right: 30px;
+
+                &:hover {
+                    opacity: 1;
+                    .content { display: block; }
+                }
+
+                .content {
+                    display: none;
+                    position: fixed;
+                    width: 100px;
+                    margin-left: -40px;
+
+                    .inner { margin-top: 18px;}
+
+                    button, a {
+                        display: block;
+                        width: 100%;
+                        padding: 12px 16px;
+                        transition: opacity .2s ease-in-out;
+                        border:none;
+                        outline: none;
+                        border-radius: .5ch;
+                        margin-top: 5px;
+                        background: var(--eerie);
+                        color: var(--magnolia);
+                        font-size: 16px;
+                        font-family: $font-family;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: .75;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    -webkit-user-select: none;
+    -moz-user-select: none;   
+    -ms-user-select: none;    
+    user-select: none;
+
+    text-align: center;
+    font-family: $font-family;
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: .5ch;
+    border: 2px solid var(--magnolia);
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+
+    margin: 0 2.5px 0 2.5px;
+
+    background-color: rgba(34, 34, 34, .5);
+    color: var(--magnolia);
+
+    transition: opacity .3s ease-in-out;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        opacity: .75;
+    }
+
+    &.disabled, &[disabled] {
+        pointer-events: none;
+        opacity: .6;
+        cursor: default;
+    }
+
+    // Colors
+    &.red {
+        background-color: rgba($red, .25);
+        border-color: $red;
+    }
+
+    &.pastel {
+        background-color: rgba($pastel, .25);
+        border-color: $pastel;
+    }
+
+    &.violet-blue {
+        background-color: rgba($violet-blue, .25);
+        border-color: $violet-blue;
+    }
+
+    &.ksu-purple {
+        background-color: rgba($ksu-purple, .25);
+        border-color: $ksu-purple;
+    }
+
+    // Sizes
+    &.xsmall {
+        font-size: 12px;
+    }
+
+    &.small {
+        font-size: 14px;
+    }
+
+    &.large {
+        font-size: 18px;
+    }
+
+}

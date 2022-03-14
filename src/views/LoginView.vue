@@ -26,8 +26,9 @@
           required
         />
 
-        <div class="btn-cont">
-          <button type="submit">Login</button>
+        <div class="btn-con">
+          <button class="btn pastel" type="submit">Login</button>
+          <a class="btn disabled">Inscrever-se</a>
         </div>
       </div>
     </form>

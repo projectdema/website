@@ -31,9 +31,29 @@
             data: data,
         },
         {
-            type: 'bar',
-            id: 'bar-chart',
-            data: data,
+            type: 'line',
+            id: 'line-chart',
+            data: {
+                labels: ['1', '2', '3'],
+                datasets: [
+                    {
+                        label: 'Psicologico',
+                        backgroundColor: '#d83f41',
+                        borderColor: '#d83f41',
+                        hoverBackgroundColor: '#d83f41',
+                        tension: .25,
+                        data: [6, 5, 7],
+                    },
+                    {
+                        label: 'Notas',
+                        backgroundColor: '#555dcc',
+                        borderColor: '#555dcc',
+                        tension: .25,
+                        hoverBackgroundColor: '#555dcc',
+                        data: [4, 5, 3],
+                    }
+                ]
+            },
         }
     ];
 
@@ -82,7 +102,20 @@
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
                 </p>
+                <a class="btn red" href="#">Button</a>
+                <a class="btn violet-blue" href="#">Button</a>
+                <a class="btn pastel" href="#">Button</a>
+                <a class="btn ksu-purple">Button</a>
+                <button class="btn disabled">Button</button>
             </div>
+        </div>
+        <div class="row">
+            <div class="column left">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
+                </p>
+            </div>
+            
         </div>
     </div>
 </template>

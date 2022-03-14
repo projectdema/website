@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --pastel: #42b883;
+  --violet-blue: #565ecd;
+  --ksu-purple: #7337bd;
+}
+
+.dark-theme {
+  --magnolia: #F9F5FF;
+  --fogra: #0A0A0A;
+  --eerie: #222222;
+}
+
+.light-theme {
+  font-weight: 600;
+  --magnolia: #0A0A0A;
+  --fogra: #F9F5FF;
+  --eerie: #ededed;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fogra);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--eerie);
+  height: 56px;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--fogra);
+  color: var(--magnolia);
+  margin: 0;
+  padding: 0;
+}
+
+body a {
+  color: var(--magnolia);
+  text-decoration: none;
+}
+
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.light-theme #options {
+  font-weight: 600;
+}
+
+.page-container {
+  padding: 45px 30px 0px 30px;
+}
+
+.login {
+  padding: 5% 15% 0 15%;
+}
+
+.login .header {
+  padding: 0px 15% 0px 15%;
+}
+
+.login .header h1 {
+  opacity: .8;
+}
+
+.login .header p {
+  opacity: .5;
+}
+
+.login form {
+  margin-top: 75px;
+}
+
+.login form label {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  opacity: 1;
+}
+
+.login form .container {
+  padding: 0 15% 0 15%;
+}
+
+.login form input[type=text], .login form input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: .5ch;
+  outline: none;
+  background: var(--magnolia);
+}
+
+@media (max-width: 768px) {
+  .login form input[type=text]:not(:focus)::-webkit-input-placeholder, .login form input[type=password]:not(:focus)::-webkit-input-placeholder {
+    opacity: 0;
+  }
+  .login form input[type=text]:not(:focus):-ms-input-placeholder, .login form input[type=password]:not(:focus):-ms-input-placeholder {
+    opacity: 0;
+  }
+  .login form input[type=text]:not(:focus)::-ms-input-placeholder, .login form input[type=password]:not(:focus)::-ms-input-placeholder {
+    opacity: 0;
+  }
+  .login form input[type=text]:not(:focus)::placeholder, .login form input[type=password]:not(:focus)::placeholder {
+    opacity: 0;
+  }
+}
+
+.login form .btn-con {
+  width: 100%;
+}
+
+.login form .btn-con button, .login form .btn-con a {
+  margin-top: 20px;
+  min-width: 25%;
+  max-width: 25%;
+}
+
+@media (max-width: 768px) {
+  .login form .btn-con button, .login form .btn-con a {
+    width: 100%;
+  }
+}
+
+.researches {
+  padding: 5% 10% 0 10%;
+}
+
+.researches .header {
+  padding: 0px 15% 0px 15%;
+}
+
+.researches .header h1 {
+  opacity: .8;
+}
+
+.researches .header p {
+  opacity: .5;
+}
+
+.researches .row {
+  margin-top: 7.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.researches .row:nth-child(n+3) {
+  margin-top: 10%;
+}
+
+.researches .row .column {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  width: 50%;
+}
+
+.researches .row .column p {
+  padding: 0 7.5% 0 7.5%;
+  opacity: .75;
+}
