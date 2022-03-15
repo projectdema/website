@@ -1,38 +1,48 @@
-<template>
-    <vue-3-chart-js
-        :id="chart.id"
-        :type="chart.type"
-        :data="chart.data"
-        @before-render="beforeRenderLogic"
-    ></vue-3-chart-js>
-</template>
+<script lang="ts" scoped>
+// @ts-ignore
+import { Chart } from 'chart.js';
 
-<script lang="ts">
-    // @ts-ignore
-    import Vue3ChartJs from '@j-t-mcc/vue3-chartjs';
-
-    export default {
-        props: {
-            chart: {
-                type: Object
-            }
+export default {
+  props: ['type', 'data', 'options', 'plugins', 'reference'],
+  setup(props: any) {
+    
+  },
+  mounted() {
+    const config = {
+        type: this.type ?? 'line',
+        data: {
+            labels: this.data.labels,
+            datasets: this.data.datasets.map((dataset) => {
+                return { 
+                    ...dataset, 
+                    tension: .25, 
+                    fill: false, 
+                    hoverBackgroundColor: dataset.backgroundColor 
+                }
+            }),
         },
-        components: {
-            Vue3ChartJs,
+        options: {
+            ...this.options,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+            responsive: true,
         },
-        setup(props: any) {
-            const chart = {
-                type: props.chart.type,
-                id: 'line-chart',
-                data: props.chart.data,
-                options: props.chart.options,
-            }
-
-            const beforeRenderLogic = (event: any) => {
-
-            }
-
-            return { chart, beforeRenderLogic };
+        plugins: {
+            ...this.plugins
         }
     }
+    new Chart(this.$refs[this.reference], config);
+  }
+}
 </script>
+
+<template>
+    <div class="chart-container">
+        <canvas :ref="reference"></canvas>
+    </div>
+</template>

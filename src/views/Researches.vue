@@ -1,66 +1,48 @@
 <script lang="ts">
     // @ts-ignore
-    import LineChart from '../components/Chart.vue';
-
-    let data = {
-        labels: ['01/03', '02/03', '03/03', '04/03'],
-        datasets: [
-            {
-                label: 'Example 1',
-                backgroundColor: '#42b883',
-                borderColor: '#42b883',
-                hoverBackgroundColor: '#42b883',
-                tension: .25,
-                data: [1, 4, 3, 5],
-            },
-            {
-                label: 'Example 2',
-                backgroundColor: '#555dcc',
-                borderColor: '#555dcc',
-                tension: .25,
-                hoverBackgroundColor: '#555dcc',
-                data: [1, 2, 5, 8],
-            }
-        ]
-    }
+    import Chart from '../components/Chart.vue';
 
     let charts = [
         {
-            type: 'line',
-            id: 'line-chart',
-            data: data,
-        },
-        {
-            type: 'line',
-            id: 'line-chart',
-            data: {
-                labels: ['1', '2', '3'],
+                labels: ['01/03', '07/03', '14/03', '21/03', '28/03'],
                 datasets: [
                     {
                         label: 'Psicologico',
-                        backgroundColor: '#d83f41',
-                        borderColor: '#d83f41',
-                        hoverBackgroundColor: '#d83f41',
-                        tension: .25,
-                        data: [6, 5, 7],
+                        borderColor: '#42b883',
+                        backgroundColor: '#42b883',
+                        data: [8, 4, 3, 5, 2],
                     },
                     {
                         label: 'Notas',
-                        backgroundColor: '#555dcc',
                         borderColor: '#555dcc',
-                        tension: .25,
-                        hoverBackgroundColor: '#555dcc',
-                        data: [4, 5, 3],
+                        backgroundColor: '#555dcc',
+                        data: [4, 6, 5, 5, 8],
                     }
                 ]
-            },
+        },
+        {
+            labels: ['01/03', '07/03', '14/03', '21/03', '28/03'],
+            datasets: [
+                {
+                    label: 'Psicologico',
+                    borderColor: '#42b883',
+                    backgroundColor: '#42b883',
+                    data: [8, 4, 3, 5, 2],
+                },
+                {
+                    label: 'Notas',
+                    borderColor: '#8b5ac7',
+                    backgroundColor: '#8b5ac7',
+                    data: [4, 6, 5, 5, 8],
+                }
+            ]
         }
     ];
 
     export default {
         name: 'Pesquisas',
         components: {
-            LineChart,
+            Chart,
         },
         data() {
             return {
@@ -72,7 +54,7 @@
 
 <template>
     <div class="page-container researches">
-        <div class="header">
+        <div class="header" ref="header">
             <h1>
                 Pesquisas
             </h1>
@@ -88,14 +70,14 @@
             </div>
             <div class="column">
                 <div class="graph">
-                    <LineChart :chart="charts[0]"/>
+                    <Chart :type="'line'" :data="charts[0]" :reference="'graph1'"/>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="column">
                 <div class="graph">
-                    <LineChart :chart="charts[1]"/>
+                    <Chart :type="'bar'" :data="charts[1]" :reference="'graph2'"/>
                 </div>
             </div>
             <div class="column right">

@@ -175,3 +175,7 @@ body a {
   padding: 0 7.5% 0 7.5%;
   opacity: .75;
 }
+
+.researches .row .column .chart-container {
+  position: relative;
+}

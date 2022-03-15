@@ -14,7 +14,7 @@
 
 .light-theme {
     font-weight: 600;
-
+    
     --magnolia: #0A0A0A;
     --fogra: #F9F5FF;
     --eerie: #ededed;
@@ -163,6 +163,10 @@ body {
             p {
                 padding: 0 7.5% 0 7.5%;
                 opacity: .75;
+            }
+
+            .chart-container {
+                position: relative;
             }
         }
     }
