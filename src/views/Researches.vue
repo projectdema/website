@@ -53,51 +53,53 @@
 </script>
 
 <template>
-    <div class="page-container researches">
-        <div class="header" ref="header">
-            <h1>
-                Pesquisas
-            </h1>
-            <p>
-                Aqui você pode ver as pesquisas que foram realizadas até o momento.
-            </p>
-        </div>
-        <div class="row">
-            <div class="column left">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
-                </p>
+    <div class="page researches">
+        <div class="page-header">
+            <div class="header-left">
+                <img id="header-banner" src="@/assets/svgs/charts.svg" style="transform: scaleX(-1);"/>
             </div>
-            <div class="column">
-                <div class="graph">
-                    <Chart :type="'line'" :data="charts[0]" :reference="'graph1'"/>
+            <div class="header-right">
+                <div class="text-box">
+                    <PageTitle title="Pesquisas" subtitle="Researches"></PageTitle>
+                    <p class="page-description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, error laboriosam. Totam, a? Provident, corrupti qui! Facere, minus. Facilis esse, repellendus eligendi dignissimos soluta dolores porro, suscipit, error optio ex enim.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="column">
-                <div class="graph">
-                    <Chart :type="'bar'" :data="charts[1]" :reference="'graph2'"/>
+        <div class="page-body">
+            <div class="row">
+                <div class="column left">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="graph">
+                        <Chart :type="'line'" :data="charts[0]" :reference="'graph1'"/>
+                    </div>
                 </div>
             </div>
-            <div class="column right">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
-                </p>
-                <a class="btn red" href="#">Button</a>
-                <a class="btn violet-blue" href="#">Button</a>
-                <a class="btn pastel" href="#">Button</a>
-                <a class="btn ksu-purple">Button</a>
-                <button class="btn disabled">Button</button>
+            <div class="row">
+                <div class="column">
+                    <div class="graph">
+                        <Chart :type="'bar'" :data="charts[1]" :reference="'graph2'"/>
+                    </div>
+                </div>
+                <div class="column right">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="column left">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
-                </p>
+            <div class="row">
+                <div class="column left">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
+                    </p>
+                </div>
+                
             </div>
-            
         </div>
     </div>
 </template>

@@ -9,9 +9,12 @@ export default {
   },
   mounted() {
     const config = {
+        // @ts-ignore
         type: this.type ?? 'line',
         data: {
+            // @ts-ignore
             labels: this.data.labels,
+            // @ts-ignore
             datasets: this.data.datasets.map((dataset) => {
                 return { 
                     ...dataset, 
@@ -22,6 +25,7 @@ export default {
             }),
         },
         options: {
+            // @ts-ignore
             ...this.options,
             scales: {
                 yAxes: [{
@@ -33,9 +37,11 @@ export default {
             responsive: true,
         },
         plugins: {
+            // @ts-ignore
             ...this.plugins
         }
     }
+    // @ts-ignore
     new Chart(this.$refs[this.reference], config);
   }
 }

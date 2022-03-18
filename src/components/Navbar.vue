@@ -20,7 +20,7 @@
           <a>⚙️</a>
           <div class="content">
             <div class="inner">
-              <button id="themeSwitch" onclick="toggleTheme()" title="Alterar tema"></button>
+              <button id="themeSwitch" @click="toggleTheme" title="Alterar tema"></button>
               <button class="" onclick="" title="Ligar/Desligar coleta de dados">Bah</button>
             </div>
           </div>
@@ -32,7 +32,46 @@
 </template>
 
 <script lang="ts">
+import SwitchSFX from '@/assets/sounds/switch.mp3';
+
 export default {
   name: "Navbar",
+  methods: {
+    setTheme(themeName: string) {
+      localStorage.setItem("theme", themeName);
+      document.documentElement.className = themeName;
+
+      try {
+        let btn = document.getElementById("themeSwitch") as any;
+        if (themeName === "dark-theme") {
+          btn.innerText = "🔦";
+        } else {
+          btn.innerText = "🌚";
+        }
+      } catch {
+        setTimeout(() => this.setTheme(themeName), 5);
+      }
+    },
+    toggleTheme() {
+      let themeName = localStorage.getItem("theme") as string;
+      if (themeName === "dark-theme") {
+        this.setTheme("light-theme");
+      } else {
+        this.setTheme("dark-theme");
+      }
+      new Audio(SwitchSFX).play();
+    },
+    loadTheme() {
+      let themeName = localStorage.getItem("theme") as string;
+      if (themeName === "dark-theme") {
+        this.setTheme("dark-theme");
+      } else {
+        this.setTheme("light-theme");
+      }
+    },
+  },
+  mounted() {
+    this.loadTheme();
+  }
 };
 </script>

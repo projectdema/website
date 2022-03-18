@@ -1,32 +1,22 @@
-// function to set a given theme/color-scheme
-function setTheme(themeName) {
-  localStorage.setItem("theme", themeName);
-  document.documentElement.className = themeName;
-
+function headerBannerResize() {
   try {
-    let btn = document.getElementById("themeSwitch");
-    if (themeName === "dark-theme") {
-      btn.innerText = "🔦";
-    } else {
-      btn.innerText = "🌚";
-    }
-  } catch {
-    setTimeout(() => setTheme(themeName), 5);
-  }
+    let hb = document.getElementById('header-banner')
+
+    let scale = Number(hb.attributes.getNamedItem('scale').value);
+
+    if (!scale) hb.width = window.innerWidth * (0.430);
+    else hb.width = window.innerWidth * (0.430 * scale);
+  } catch {}
 }
-// function to toggle between light and dark theme
-function toggleTheme() {
-  if (localStorage.getItem("theme") === "dark-theme") {
-    setTheme("light-theme");
-  } else {
-    setTheme("dark-theme");
-  }
-}
-// Immediately invoked function to set the theme on initial load
+
 (function () {
-  if (localStorage.getItem("theme") === "dark-theme") {
-    setTheme("dark-theme");
-  } else {
-    setTheme("light-theme");
-  }
+  headerBannerResize();
 })();
+
+window.onload = () => {
+  headerBannerResize();
+}
+
+window.onresize = () => {
+  headerBannerResize();
+}

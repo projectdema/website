@@ -1,5 +1,5 @@
 <template>
-  <div class="login page-container">
+  <div class="login page">
     <div class="header">
       <h1>Acesso para estudantes</h1>
       <p>
