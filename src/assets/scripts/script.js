@@ -1,22 +1,9 @@
-function headerBannerResize() {
-  try {
-    let hb = document.getElementById('header-banner')
-
-    let scale = Number(hb.attributes.getNamedItem('scale').value);
-
-    if (!scale) hb.width = window.innerWidth * (0.430);
-    else hb.width = window.innerWidth * (0.430 * scale);
-  } catch {}
-}
-
-(function () {
-  headerBannerResize();
-})();
-
-window.onload = () => {
-  headerBannerResize();
-}
-
-window.onresize = () => {
-  headerBannerResize();
+window.onscroll = function() {
+  let ph = document.getElementById('page-header')
+  let currentScrollPos = window.pageYOffset;
+  if ((ph.offsetHeight - 25) > currentScrollPos) {
+    document.getElementById("navbar").classList.remove("navbar-ghost");
+  } else {
+    document.getElementById("navbar").classList.add("navbar-ghost");
+  }
 }

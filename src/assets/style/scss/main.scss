@@ -1,49 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --pastel: #42b883;
     --violet-blue: #565ecd;
-    --ksu-purple: #7337bd;
+    --ksu-yellow: #FEE75C;
 }
 
 .dark-theme {
     --magnolia: #F9F5FF;
     --fogra: #0A0A0A;
+    --duble: #121212;
     --eerie: #222222;
 }
 
 .light-theme {
-    font-weight: 600;
-    
     --magnolia: #0A0A0A;
-    --fogra: #F9F5FF;
-    --eerie: #ededed;
+    --fogra: #fff;
+    --duble: #f6f6f6;
+    --eerie: #f6f6f6;
 }
 
 $font-family: 'Montserrat', sans-serif;
 
-::-webkit-scrollbar {
-    width: 16px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--fogra);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--eerie);
-    height: 56px;
-    border-radius: 8px;
-    border: 4px solid transparent;
-    background-clip: content-box;
+html {
+    overflow-x: hidden;
 }
 
 body {
     font-family: $font-family;
     background: var(--fogra);
     color: var(--magnolia);
-    margin:0;
-    padding:0;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
 
     a {
         color: var(--magnolia);
@@ -51,156 +39,36 @@ body {
     }
 }
 
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/*::-webkit-scrollbar-track {
+}*/
+
+::-webkit-scrollbar-thumb {
+    background: var(--magnolia);
+    height: 56px;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+}
+
 .unselectable {
     -webkit-user-select: none;
     -moz-user-select: none;   
     -ms-user-select: none;    
-    user-select: none;        
-}
-
-.login {
-    padding: 5% 15% 0 15%;
-    
-    .header {
-        padding: 0px 15% 0px 15%;
-
-        h1 {
-            opacity: .8;
-        }
-
-        p {
-            opacity: .5;
-        }
-    }
-
-    form {
-        margin-top: 75px;
-
-        label {
-            display: block;
-            width: 100%;
-            margin-top: 15px;
-            opacity: 1;        
-        }
-
-        .container {
-            padding: 0 15% 0 15%;
-        }
-
-        input[type=text], input[type=password] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: block;
-            border: none;
-            box-sizing: border-box;
-            border-radius: .5ch;
-            outline: none;
-            background: var(--magnolia);
-
-            &:not(:focus) {
-                @media (max-width: 768px) {
-                    &::placeholder {
-                        opacity: 0;
-                    }
-                }
-            }
-        }
-
-        .btn-con {
-            width: 100%;
-
-            button, a {
-                margin-top: 20px;
-                min-width: 25%;
-                max-width: 25%;
-
-                @media (max-width: 768px) {
-                    width: 100%;
-                }
-            }
-        }
-    }
-}
-
-.researches {
-    .row {
-        margin-top: 7.5%;
-        display: flex;
-
-        &:nth-child(n+3) {
-            margin-top: 10%;
-        }
-
-        .column {
-            flex: 50%;
-            width: 50%;
-
-            p {
-                padding: 0 7.5% 0 7.5%;
-                opacity: .75;
-            }
-
-            .chart-container {
-                position: relative;
-                padding: 15px;
-            }
-        }
-    }
+    user-select: none;
 }
 
 .home {
     .page-header {
-        .header-right {
-            .text-box {
-                .subscribe {
-                    margin-top: 10%;
-                    position: relative;
-                    
-                    .label {
-                        display: block;
-                        width: 100%;
-                        font-weight: 600;
-                        opacity: .5;
-                    }
+        input {
+            width: 16vw;
+        }
 
-                    .box {
-                        position: relative;
-
-                        .field {
-                            position: absolute;
-                            font-family: $font-family;
-    
-                            margin-top: 2px;
-                            background: var(--eerie);
-                            color: var(--magnolia);
-                            margin-top: 5px;
-    
-                            height: 23px;
-                            font-size: 14px;
-                            padding: 9px 16px;
-                            border-radius: .5ch;
-                            outline: none;
-                            border: none;
-                            font-weight: 500;
-                            box-shadow: none;
-    
-                            width: calc(40% - 4px);
-    
-                            &:focus {
-                                outline: 2px solid var(--violet-blue);
-                            }
-                        }
-        
-                        .btn {
-                            position: absolute;
-                            margin-top: 5px;
-                            right: calc(30% - 38px);
-                            width: 30%;
-                        }
-                    }
-                }
-            }
+        button {
+            margin-left: .5vw;
         }
 
         @media screen and (max-width: 768px) {

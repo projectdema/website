@@ -4,7 +4,7 @@
         props: {
             title: {
                 type: String,
-                required: true,
+                required: false,
             },
             subtitle: {
                 type: String,
@@ -16,10 +16,10 @@
 
 <template>
     <h1 class="page-title">
-        <span>
+        <span class="title">
             {{ title }}
         </span>
-        <span v-if="subtitle">
+        <span v-if="subtitle" class="subtitle">
             {{ subtitle }}
         </span>
     </h1>

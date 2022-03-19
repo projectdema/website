@@ -1,22 +1,26 @@
 <script lang="ts">
     // @ts-ignore
-    import Chart from '../components/Chart.vue';
+    import Chart from '../components/PageUtils/Chart.vue';
 
     let charts = [
         {
                 labels: ['01/03', '07/03', '14/03', '21/03', '28/03'],
                 datasets: [
                     {
-                        label: 'Psicologico',
+                        label: 'Psicológico',
                         borderColor: '#42b883',
                         backgroundColor: '#42b883',
                         data: [8, 4, 3, 5, 2],
                     },
                     {
-                        label: 'Notas',
-                        borderColor: '#555dcc',
-                        backgroundColor: '#555dcc',
+                        type: "bar",
+                        label: 'Média de Nota',
+                        borderColor: 'rgba(85, 93, 204, 0.2)',
+                        hoverBorderColor: 'rgba(85, 93, 204, 0.3)',
+                        backgroundColor: 'rgba(85, 93, 204, 0.7)',
                         data: [4, 6, 5, 5, 8],
+                        borderWidth: 2,
+                        barPercentage: 0.5,
                     }
                 ]
         },
@@ -40,7 +44,6 @@
     ];
 
     export default {
-        name: 'Pesquisas',
         components: {
             Chart,
         },
@@ -53,24 +56,27 @@
 </script>
 
 <template>
-    <div class="page researches">
-        <div class="page-header">
+    <div class="page">
+        <div class="page-header" id="page-header">
             <div class="header-left">
-                <img id="header-banner" src="@/assets/svgs/charts.svg" style="transform: scaleX(-1);"/>
+                <img class="header-banner" src="@/assets/svgs/pie.svg" style="transform: scaleX(-1);"/>
             </div>
-            <div class="header-right">
-                <div class="text-box">
-                    <PageTitle title="Pesquisas" subtitle="Researches"></PageTitle>
+            <div class="center-y header-right">
+                <div class="text-box center-it">
+                    <PageTitle subtitle="RESEARCHES"></PageTitle>
                     <p class="page-description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, error laboriosam. Totam, a? Provident, corrupti qui! Facere, minus. Facilis esse, repellendus eligendi dignissimos soluta dolores porro, suscipit, error optio ex enim.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor asperiores, quaerat autem harum voluptatum consequuntur nulla eius modi quisquam, cum excepturi totam sed exercitationem ratione ab, unde molestias error! Sint voluptatibus repudiandae suscipit culpa, quidem magni atque dolorem vel eius aperiam saepe. Ab.
                     </p>
                 </div>
             </div>
         </div>
-        <div class="page-body">
-            <div class="row">
-                <div class="column left">
-                    <p>
+        <div class="page-body secondary">
+            <div class="two-column-row" id="notas">
+                <div class="column">
+                    <h1 class="title">
+                        Lorem Ipsum
+                    </h1>
+                    <p class="description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
                     </p>
                 </div>
@@ -80,26 +86,28 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+        </div>
+        <div class="page-body secondary">
+            <div class="two-column-row">
                 <div class="column">
                     <div class="graph">
                         <Chart :type="'bar'" :data="charts[1]" :reference="'graph2'"/>
                     </div>
                 </div>
-                <div class="column right">
-                    <p>
+                <div class="column">
+                    <p class="description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
                     </p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="column left">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
-                    </p>
-                </div>
-                
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 </template>

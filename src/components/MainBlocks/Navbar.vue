@@ -1,27 +1,28 @@
 <template>
   <div class="navbar" id="navbar">
-    <ul class="itself">
-      <li id="navbar-brand" class="navbar-brand"><span>project</span><span>Dema</span></li>
+    <ul class="itself" id="navbar-itself">
+      <li>
+        <router-link to="/" class="navbar-link navbar-brand" tabindex="-1"><span>project</span><span>Dema</span></router-link>
+      </li>
 
       <template v-for="route in $router.options.routes" :key="route.path">
-        <div v-if="route.name !== 'Login'">
+        <div v-if="!['Login', 'Home'].includes(route.name)">
           <li>
             <router-link class="navbar-link" :to="route.path">{{ route.name }}</router-link>
           </li>
         </div>
-        <div v-else>
+        <div v-else-if="!['Home'].includes(route.name)">
           <li style="float: right">
             <router-link class="navbar-link" :to="route.path">{{ route.name }}</router-link>
           </li>
         </div>
       </template>
       <li style="float: right">
-        <div class="options navbar-link">
+        <div class="navbar-link options">
           <a>⚙️</a>
           <div class="content">
             <div class="inner">
               <button id="themeSwitch" @click="toggleTheme" title="Alterar tema"></button>
-              <button class="" onclick="" title="Ligar/Desligar coleta de dados">Bah</button>
             </div>
           </div>
         </div>
@@ -36,6 +37,9 @@ import SwitchSFX from '@/assets/sounds/switch.mp3';
 
 export default {
   name: "Navbar",
+  data() {
+    return {indexes: 0}
+  },
   methods: {
     setTheme(themeName: string) {
       localStorage.setItem("theme", themeName);
@@ -44,15 +48,17 @@ export default {
       try {
         let btn = document.getElementById("themeSwitch") as any;
         if (themeName === "dark-theme") {
-          btn.innerText = "🔦";
+          btn.innerHTML = '<i class="fa-solid fa-toggle-on"></i>';
         } else {
-          btn.innerText = "🌚";
+          btn.innerHTML = '<i class="fa-solid fa-toggle-off"></i>';
         }
       } catch {
         setTimeout(() => this.setTheme(themeName), 5);
       }
     },
     toggleTheme() {
+      let navbar = document.getElementById("navbar-itself") as any;
+      navbar.style.transition = "all 0s ease";
       let themeName = localStorage.getItem("theme") as string;
       if (themeName === "dark-theme") {
         this.setTheme("light-theme");
@@ -63,10 +69,10 @@ export default {
     },
     loadTheme() {
       let themeName = localStorage.getItem("theme") as string;
-      if (themeName === "dark-theme") {
-        this.setTheme("dark-theme");
-      } else {
+      if (themeName === "light-theme") {
         this.setTheme("light-theme");
+      } else {
+        this.setTheme("dark-theme");
       }
     },
   },

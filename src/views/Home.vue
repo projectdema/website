@@ -1,7 +1,5 @@
 <script lang="ts">
-  
 export default {
-  name: "Home",
   methods: {
     subscribe() {
       let email = (this as any).subscribeEmail;
@@ -22,24 +20,45 @@ export default {
   <CustomAlert :duration="200" :closeIn="3500" ref="alert"></CustomAlert>
   
   <div class="page home">
-    <div class="page-header">
+    <div class="page-header" id="page-header">
       <div class="header-left">
-        <img id="header-banner" src="@/assets/svgs/researching_re_fuod.svg" style="transform: scaleX(-1);"/>
+        <img class="header-banner" src="@/assets/svgs/collab.svg" style=""/>
       </div>
-      <div class="header-right">
-        <div class="text-box">
-          <h1 class="page-title"><ProjectDema></ProjectDema></h1>
+      <div class="center-y header-right">
+        <div class="text-box center-it">
+          <PageTitle subtitle="WELCOME"></PageTitle>
           <p class="page-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor asperiores, quaerat autem harum voluptatum consequuntur nulla eius modi quisquam, cum excepturi totam sed exercitationem ratione ab, unde molestias error! Sint voluptatibus repudiandae suscipit culpa, quidem magni atque dolorem vel eius aperiam saepe. Ab.</p>
 
-          <div class="subscribe">
-            <span class="label">Receba boletins informativos sobre a pesquisa</span>
-            <div class="box">
-              <input class="field" type="text" id="email" v-model="subscribeEmail" placeholder="Email" autocomplete="off" @keypress.enter="subscribe"/>
-              <button class="btn small pastel" @click="subscribe">Inscrever-se</button>
+          <div class="page-header-button-line subscribe">
+            <p class="label">
+              Newsletter
+            </p>
+            <div class="buttons">
+              <input 
+                class="field" 
+                type="text" 
+                id="email" 
+                v-model="subscribeEmail" 
+                placeholder="Enter your email to receive the newsletter" 
+                autocomplete="off" 
+                @keypress.enter="subscribe"
+              />
+              <button class="btn small pastel" @click="subscribe">Subscribe</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="page-body secondary">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
   </div>
 </template>
