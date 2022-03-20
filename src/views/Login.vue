@@ -15,7 +15,7 @@
     </div>
 
     <div class="page-body secondary">
-      <div class="formulary half75" style="margin-top: -2.75vw;">
+      <div class="formulary half75" style="">
         <form action="/" method="post" autocomplete="off">
           <label for="uname" class="label">Identification</label>
           <input
@@ -41,6 +41,7 @@
       </div>
     </div>
   </div>
+  <Footer :invertColor="false"/>
 </template>
 
 <script lang="ts">

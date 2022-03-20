@@ -85,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-body secondary">
+        <div class="page-body">
             <div class="two-column-row">
                 <div class="column">
                     <div class="graph">
@@ -101,13 +101,6 @@
                 </div>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </div>
+    <Footer :invertColor="true"/>
 </template>

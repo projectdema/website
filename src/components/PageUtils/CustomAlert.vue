@@ -59,7 +59,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="alert-box" :class="!status?`${position?position:'top center'}`:`${position?position:'top center'} ${isHide?'':'active'}`" :style="`width: ${width?width:400}px;transition: all ${status?duration:0}ms ease-in-out;`">
+  <div class="alert" :class="!status?`${position?position:'top center'}`:`${position?position:'top center'} ${isHide?'':'active'}`" :style="`width: ${width?width:400}px;transition: all ${status?duration:0}ms ease-in-out;`">
     <div class="alert-container">
       <div class="alert-color-bar" :class="alertType"></div>
       <h1 class="alert-title">{{ header }}</h1>

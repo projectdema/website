@@ -10,13 +10,6 @@
 
     z-index: 99999;
 
-    &.navbar-ghost {
-        .itself {
-            transition: background-color .3s ease;
-            background-color: var(--duble);
-        }
-    }
-
     .itself {
         position: absolute;
         width: 80%;
@@ -36,7 +29,7 @@
 
             .navbar-link {
                 display: block;
-                padding: 0.8vw 1.2vw;
+                padding: 0.5rem 1.2rem;
                 transition: opacity .2s ease-in-out;
                 
                 &:not(.options):not(.navbar-brand) {
@@ -106,6 +99,91 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.footer {
+    &.secondary {
+        background-color: var(--duble);
+    }
+    
+    padding: 35px 75px 10px 75px;
+    
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            line-height: 2;
+    
+            a {
+                transition: opacity .3s ease-in-out;
+                opacity: var(--shadow);
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .column {
+        .description {
+            padding: 0 30px 0 0;
+            opacity: var(--strong-shadow);
+        }
+
+        .bottom {
+            font-style: italic;
+            opacity: var(--strong-shadow);
+            font-size: 12px;
+        }
+    }
+
+    .section-title {
+        font-size: $ff-size-primary2 / 2;
+        font-weight: $ff-weight-semi;
+        font-family: $ff-primary;
+        padding: 10px 0;
+
+
+        &.brand {
+            span:last-child {
+                color: $violet-blue;
+                font-weight: $ff-weight-bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .left-side, .right-side {
+        float: left;
+    }
+
+    .left-side {
+        padding: 0 30px 0 15px;
+        width: calc(30% - 45px);
+    }
+
+    .right-side {
+        padding: 0 15px 0 30px;
+        width: calc(70% - 45px);
+
+        .column {
+            width: 33.33%;
+            float: left;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
         }
     }
 }
@@ -223,34 +301,33 @@
     
 }
 
-.alert-box {
+.alert {
     position: fixed;
     opacity: 0;
     margin: 0;
-    height: 2.5vw;
+    height: 2.5rem;
     border: none;
     border-radius: $border-radius;
     background: var(--eerie);
     text-align: center;
     z-index: 1000000;
-    padding: 0.25vw .5vw;
+    padding: 0.5rem 1rem;
 
     .alert-container {
         display: flex;
         position: relative;
-        height: 2.6vw;
+        height: 2.5rem;
         width: 100%;
-        
         align-items: center;
         justify-content: center;
 
         .alert-color-bar {
             position: fixed;
 
-            height: calc(100% - 0.9vw);
-            left: 0.9vw;
-            top: 0.4vw;
-            width: 0.2vw;
+            height: 2.5rem;
+            left: 0.5rem;
+            top: 0.5rem;
+            width: 0.25rem;
             border-radius: 2px;
 
             background: $pastel;
@@ -258,15 +335,12 @@
             &.error {
                 background: $red;
             }
-
-            &.default {
-                background: $pastel;
-            }
         }
 
         .alert-title {
-            font-family: $ff-primary;
-            vertical-align:middle;
+            vertical-align: middle;
+            font-size: $ff-size-secondary;
+            font-weight: $ff-weight-semi;
         }
     }
 
@@ -462,7 +536,7 @@
 .formulary {
 
     * {
-        font-family: 'Montserrat', sans-serif;
+        font-family: $ff-primary;
     }
 
     &.half75 {
@@ -477,7 +551,7 @@
         font-weight: $ff-weight-semi;
         
         &:not(:first-child) {
-            margin-top: .75vw; 
+            margin-top: .75rem; 
         }
     }
 
@@ -491,10 +565,7 @@
     }
 
     .btn-line {
-        margin-top: 1.25vw;
-        .btn {
-            padding: .35vw 1.2vw;
-        }
+        margin-top: 1rem;
     }
 }
 

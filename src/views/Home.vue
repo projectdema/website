@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <CustomAlert :duration="200" :closeIn="3500" ref="alert"></CustomAlert>
+  <CustomAlert :duration="200" :closeIn="13500" ref="alert"></CustomAlert>
   
   <div class="page home">
     <div class="page-header" id="page-header">

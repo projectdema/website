@@ -28,8 +28,8 @@ $mobile-max-sec-width: 1200px;
 
 .dark-theme {
 
-    --shadow: 0.8;
-    --strong-shadow: 0.6;
+    --shadow: 0.75;
+    --strong-shadow: 0.25;
 
     --magnolia: #F9F5FF;
     --fogra: #0A0A0A;
@@ -38,7 +38,6 @@ $mobile-max-sec-width: 1200px;
 }
 
 .light-theme {
-
     --strong-shadow: 0.7;
     --shadow: 0.9;
 

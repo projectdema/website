@@ -38,9 +38,6 @@ import SwitchSFX from '@/assets/sounds/switch.mp3';
 
 export default {
   name: "Navbar",
-  data() {
-    return {indexes: 0}
-  },
   methods: {
     setTheme(themeName: string) {
       localStorage.setItem("theme", themeName);
