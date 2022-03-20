@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$red: #d1383b;
+$pastel: #42b883;
+$violet-blue: #565ecd;
+$ksu-yellow: #FEE75C;
+
+$ff-primary: 'Montserrat', sans-serif;
+$ff-accent: 'Work Sans', sans-serif;
+
+$ff-size-primary: 4rem;
+$ff-size-primary2: 3rem;
+$ff-size-secondary: 1.00rem;
+$ff-size-last: 0.90rem;
+
+$ff-line-height-primary: 1.5;
+
+$ff-weight-primary: 400;
+$ff-weight-semi: 600;
+$ff-weight-bold: 900;
+
+$border-radius: 4px;
+$border-width: 2px;
+
+$mobile-max-width: 780px;
+$mobile-max-sec-width: 1200px;
+
+.dark-theme {
+
+    --shadow: 0.8;
+    --strong-shadow: 0.6;
+
+    --magnolia: #F9F5FF;
+    --fogra: #0A0A0A;
+    --duble: #121212;
+    --eerie: #222222;
+}
+
+.light-theme {
+
+    --strong-shadow: 0.7;
+    --shadow: 0.9;
+
+    --magnolia: #161617;
+    --fogra: #fff;
+    --duble: #f6f6f6;
+    --eerie: #f6f6f6;
+}

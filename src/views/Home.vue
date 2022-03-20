@@ -1,4 +1,5 @@
 <script lang="ts">
+
 export default {
   methods: {
     subscribe() {
@@ -6,8 +7,10 @@ export default {
       let reg = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
 
       if(reg.test(email)) {
+        // @ts-ignore
         this.$refs.alert.showAlert({ alertHeader: "Inscrito com sucesso!" })
       } else {
+        // @ts-ignore
         this.$refs.alert.showAlert({ alertHeader: "Email inválido", alertType: "error" })
       }
 
@@ -27,7 +30,13 @@ export default {
       <div class="center-y header-right">
         <div class="text-box center-it">
           <PageTitle subtitle="WELCOME"></PageTitle>
-          <p class="page-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor asperiores, quaerat autem harum voluptatum consequuntur nulla eius modi quisquam, cum excepturi totam sed exercitationem ratione ab, unde molestias error! Sint voluptatibus repudiandae suscipit culpa, quidem magni atque dolorem vel eius aperiam saepe. Ab.</p>
+          <p class="page-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor asperiores, 
+            quaerat autem harum voluptatum consequuntur nulla eius modi quisquam, cum 
+            excepturi totam sed <span class="highlight">exercitationem</span> ratione ab, unde molestias error! 
+            Sint voluptatibus repudiandae suscipit culpa, quidem magni atque dolorem vel 
+            eius aperiam saepe. Ab.
+          </p>
 
           <div class="page-header-button-line subscribe">
             <p class="label">
@@ -43,7 +52,7 @@ export default {
                 autocomplete="off" 
                 @keypress.enter="subscribe"
               />
-              <button class="btn small pastel" @click="subscribe">Subscribe</button>
+              <button class="btn solid medium pastel no-margin" @click="subscribe">Subscribe</button>
             </div>
           </div>
         </div>
@@ -53,12 +62,13 @@ export default {
       <br>
       <br>
       <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <a class="btn solid ksu-yellow">Button</a>
+      <a class="btn solid red">Button</a>
+      <a class="btn solid pastel small">Button</a>
+      <a class="btn solid violet-blue disabled">Button</a>
       <br>
       <br>
     </div>
   </div>
+  <Footer/>
 </template>

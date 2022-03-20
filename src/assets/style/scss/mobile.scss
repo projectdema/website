@@ -1,0 +1,116 @@
+@import "./variables";
+
+@media (max-width: $mobile-max-width) {
+    .navbar {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: block;
+    }
+
+    .page {
+        .page-header {
+            text-align: center;
+            
+            .page-title {
+                font-size: $ff-size-primary2;
+                font-weight: $ff-weight-bold;
+            }
+
+            .text-box {
+                padding: 0 !important;
+            }
+            
+            .header-left {
+                display: none !important;
+            }
+
+            .header-right {
+                position: absolute;
+                width: 90% !important;
+                right: 0% !important;
+            }
+
+            .header-banner {
+                display: none;
+            }
+
+            .page-header-button-line {
+                margin-top: calc(2%) !important;
+                width: 100% !important;
+
+                .btn {
+                    width: 90% !important;
+                    margin-top: 5px;
+                    padding: 0.275rem 1rem !important;
+                }
+
+                input {
+                    padding: 0.475rem 1rem !important;
+
+                    width: 90% !important;
+                    font-size: $ff-size-last;
+
+                    &:focus {
+                        outline: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .two-column-row {
+
+        .column {
+            width: 100% !important;
+
+            .title {
+                font-size: $ff-size-primary2;
+            }
+        }
+    }
+
+    .graph {
+        .chart-container {
+            min-height: 150px !important;
+            height: 250px !important;
+        }
+    }
+}
+
+@media (max-width: $mobile-max-sec-width) {
+    .page {
+        .page-header {
+
+            .page-title {
+                font-size: $ff-size-primary2;
+            }
+            
+            .header-right {
+                width: 50%;
+                right: 0;
+                padding: 15px 15px 0 35px;
+            }
+
+            .header-banner {
+                width: 90% !important;
+                float: left !important;
+            }
+
+            .page-header-button-line {
+                margin-top: 0 !important;
+                
+                input {
+                    width: 100%;
+                    padding: 0.475rem 1rem;
+                }
+
+                .btn {
+                    margin: 5px 0 !important;
+                    width: 50% !important;
+                }
+            }
+        }
+    }
+}

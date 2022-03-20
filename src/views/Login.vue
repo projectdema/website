@@ -34,8 +34,8 @@
           />
 
           <div class="btn-line">
-            <button class="btn small pastel" type="submit">Login</button>
-            <a class="btn small">Sign Up</a>
+            <button class="btn solid pastel" type="submit">Login</button>
+            <a class="btn ghost violet-blue">Signup</a>
           </div>
         </form>
       </div>

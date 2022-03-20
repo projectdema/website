@@ -12,9 +12,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.179",
+    "@kurkle/color": "^0.1.9",
     "axios": "^0.26.1",
-    "chart.js": "^2.9.4",
+    "chart.js": "^3.7.1",
     "dotenv": "^16.0.0",
     "dsc.db": "^3.0.6",
     "lodash": "^4.17.21",

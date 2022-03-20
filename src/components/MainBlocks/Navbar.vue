@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar" id="navbar">
+  <div class="navbar unselectable" id="navbar">
     <ul class="itself" id="navbar-itself">
       <li>
         <router-link to="/" class="navbar-link navbar-brand" tabindex="-1"><span>project</span><span>Dema</span></router-link>
@@ -33,6 +33,7 @@
 </template>
 
 <script lang="ts">
+// @ts-ignore
 import SwitchSFX from '@/assets/sounds/switch.mp3';
 
 export default {
@@ -48,9 +49,9 @@ export default {
       try {
         let btn = document.getElementById("themeSwitch") as any;
         if (themeName === "dark-theme") {
-          btn.innerHTML = '<i class="fa-solid fa-toggle-on"></i>';
+          btn.innerHTML = '<i class="fa-solid fa-toggle-off"> </i>';
         } else {
-          btn.innerHTML = '<i class="fa-solid fa-toggle-off"></i>';
+          btn.innerHTML = '<i class="fa-solid fa-toggle-on"> </i>';
         }
       } catch {
         setTimeout(() => this.setTheme(themeName), 5);
@@ -77,6 +78,7 @@ export default {
     },
   },
   mounted() {
+    // @ts-ignore
     this.loadTheme();
   }
 };

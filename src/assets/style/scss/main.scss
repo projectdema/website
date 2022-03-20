@@ -1,9 +1,4 @@
-
-:root {
-    --pastel: #42b883;
-    --violet-blue: #565ecd;
-    --ksu-yellow: #FEE75C;
-}
+@import "./variables.scss";
 
 .dark-theme {
     --magnolia: #F9F5FF;
@@ -19,24 +14,8 @@
     --eerie: #f6f6f6;
 }
 
-$font-family: 'Montserrat', sans-serif;
-
 html {
     overflow-x: hidden;
-}
-
-body {
-    font-family: $font-family;
-    background: var(--fogra);
-    color: var(--magnolia);
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-
-    a {
-        color: var(--magnolia);
-        text-decoration: none;
-    }
 }
 
 ::-webkit-scrollbar {
@@ -59,22 +38,4 @@ body {
     -moz-user-select: none;   
     -ms-user-select: none;    
     user-select: none;
-}
-
-.home {
-    .page-header {
-        input {
-            width: 16vw;
-        }
-
-        button {
-            margin-left: .5vw;
-        }
-
-        @media screen and (max-width: 768px) {
-            .left, .right {
-              width: 100%;
-            }
-        }
-    }
 }

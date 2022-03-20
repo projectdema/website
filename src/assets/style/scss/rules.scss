@@ -1,15 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "./variables.scss";
 
 *, *::after, *::before {
     -webkit-user-drag: none;
+
+    color: var(--magnolia) default;
 }
 
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $ff-primary;
+    margin: 0;
+
+    background: var(--fogra);
+    color: var(--magnolia);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: $ff-weight-bold;
+}
 
 h1 {
-    font-size: 2.75vw;
+    font-size: $ff-size-primary;
 }
 
-p {
-    font-size: 0.90vw;
+h2, h3 {
+    font-size: $ff-size-primary2;
+}
+
+p, ul, a, button, li, input {
+    font-size: $ff-size-secondary;
+    line-height: $ff-line-height-primary;
+    font-weight: $ff-weight-primary;
+
+    color: var(--magnolia);
+}
+
+input {
+    outline: none;
+    border: none;
+    font-weight: $ff-weight-semi;
+}
+
+a {
+    color: var(--magnolia);
+    text-decoration: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
