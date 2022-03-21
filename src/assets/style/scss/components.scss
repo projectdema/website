@@ -125,9 +125,13 @@
     
             a {
                 transition: opacity .3s ease-in-out;
-                opacity: var(--shadow);
+                
+                span {
+                    padding-left: 5px;
+                }
+
                 &:hover {
-                    opacity: 1;
+                    opacity: var(--shadow);
                 }
             }
         }
@@ -143,17 +147,26 @@
             font-style: italic;
             opacity: var(--strong-shadow);
             font-size: 12px;
+
+            .fa-heart {
+                color: $red;
+            }
         }
     }
 
     .section-title {
+        cursor: default;
         font-size: $ff-size-primary2 / 2;
         font-weight: $ff-weight-semi;
         font-family: $ff-primary;
         padding: 10px 0;
+        color: $violet-blue;
 
 
         &.brand {
+            span:first-child {
+                color: var(--magnolia);
+            }
             span:last-child {
                 color: $violet-blue;
                 font-weight: $ff-weight-bold;
