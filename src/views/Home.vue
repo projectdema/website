@@ -59,15 +59,7 @@ export default {
       </div>
     </div>
     <div class="page-body secondary">
-      <br>
-      <br>
-      <br>
-      <a class="btn solid ksu-yellow">Button</a>
-      <a class="btn solid red">Button</a>
-      <a class="btn solid pastel small">Button</a>
-      <a class="btn solid violet-blue disabled">Button</a>
-      <br>
-      <br>
+      
     </div>
   </div>
   <Footer/>

@@ -95,6 +95,9 @@
                     </div>
                 </div>
                 <div class="column">
+                    <h2 class="title">
+                        LOREM IPSUM
+                    </h2>
                     <p class="description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusamus error esse odio quis repellat quas eius corrupti praesentium vero! Sapiente tenetur adipisci, magni qui modi rem? Deleniti, atque nulla!
                     </p>
