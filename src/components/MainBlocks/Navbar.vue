@@ -22,7 +22,7 @@
           <a>⚙️</a>
           <div class="content">
             <div class="inner">
-              <button id="themeSwitch" @click="toggleTheme" title="Alterar tema"></button>
+              <button class="btn" id="themeSwitch" @click="toggleTheme" title="Alterar tema"></button>
             </div>
           </div>
         </div>

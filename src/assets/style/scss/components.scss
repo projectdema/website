@@ -70,26 +70,14 @@
                     display: none;
                     position: fixed;
                     width: 7vw;
-                    margin-left: -2.9vw;
+                    margin-left: -3vw;
 
-                    .inner { margin-top: 1.15vw;}
+                    .inner { margin-top: .5vw;}
 
-                    button, a {
-                        display: block;
+                    .btn {
                         width: 100%;
-                        padding: 0.6vw 1vw;
-                        transition: opacity .2s ease-in-out;
-                        border:none;
-                        outline: none;
-                        border-radius: $border-radius;
-                        margin-top: .3vw;
-                        background-color: var(--eerie);
-
-                        cursor: pointer;
-
-                        &:hover {
-                            opacity: var(--shadow);
-                        }
+                        background-color: var(--duble);
+                        color: var(--magnolia);
                     }
                 }
             }
@@ -470,8 +458,6 @@
 
         .header-banner {
             padding: 12px;
-            opacity: var(--shadow);
-            z-index: -1;
             animation: fadeIn .2s ease-in-out;
             -webkit-user-drag: none;
             height: 100%;
