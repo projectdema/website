@@ -14,7 +14,7 @@ body {
     font-family: $ff-primary;
     margin: 0;
 
-    background: var(--fogra);
+    background-color: var(--fogra);
     color: var(--magnolia);
 }
 
@@ -56,8 +56,4 @@ a {
 img {
     max-width: 100%;
     display: block;
-}
-
-.light {
-    
 }

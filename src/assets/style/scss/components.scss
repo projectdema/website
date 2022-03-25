@@ -83,7 +83,7 @@
                         outline: none;
                         border-radius: $border-radius;
                         margin-top: .3vw;
-                        background: var(--eerie);
+                        background-color: var(--eerie);
 
                         cursor: pointer;
 
@@ -315,7 +315,7 @@
     height: 2.5rem;
     border: none;
     border-radius: $border-radius;
-    background: var(--eerie);
+    background-color: var(--eerie);
     text-align: center;
     z-index: 1000000;
     padding: 0.5rem 1rem;
@@ -337,10 +337,10 @@
             width: 0.25rem;
             border-radius: 2px;
 
-            background: $pastel;
+            background-color: $pastel;
 
             &.error {
-                background: $red;
+                background-color: $red;
             }
         }
 
@@ -428,7 +428,7 @@
                     padding: 0.475rem 1.9rem;
 
                     border-radius: $border-radius;
-                    background: var(--eerie);
+                    background-color: var(--eerie);
                     color: var(--magnolia);
                     width: 50%;
 
@@ -486,11 +486,11 @@
         padding: 4% 6%;
 
         &.primary {
-            background: var(--fogra);
+            background-color: var(--fogra);
         }
 
         &.secondary {
-            background: var(--duble);
+            background-color: var(--duble);
         }
     }
 }
@@ -574,7 +574,7 @@
         width: 100%;
         padding: .4vw 2vw;
         margin-top: .35vw;
-        background: var(--fogra);
+        background-color: var(--fogra);
     }
 
     .btn-line {
