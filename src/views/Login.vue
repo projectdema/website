@@ -2,7 +2,7 @@
   <div class="page login">
     <div class="page-header" id="page-header">
       <div class="header-left">
-        <img class="header-banner" src="@/assets/svgs/join.svg" style="transform: scaleX(-1);"/>
+        <img class="header-banner" src="/svgs/join.svg" style="transform: scaleX(-1);"/>
       </div>
       <div class="header-right center-y">
         <div class="text-box center-it">

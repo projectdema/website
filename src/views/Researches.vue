@@ -56,7 +56,7 @@
     <div class="page">
         <div class="page-header" id="page-header">
             <div class="header-left">
-                <img class="header-banner" src="@/assets/svgs/pie.svg" style="transform: scaleX(-1);"/>
+                <img class="header-banner" src="/svgs/pie.svg" style="transform: scaleX(-1);"/>
             </div>
             <div class="header-right center-y">
                 <div class="text-box center-it">
