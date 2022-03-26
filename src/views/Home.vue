@@ -1,6 +1,10 @@
 <script lang="ts">
+// @ts-ignore
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
 
 export default {
+  components: { VueperSlides, VueperSlide },
   methods: {
     subscribe() {
       let email = (this as any).subscribeEmail;
@@ -15,7 +19,28 @@ export default {
       }
 
     }
-  }
+  },
+  data: () => ({
+    autoPlaying: true,
+    internalAutoPlaying: true,
+    slides: [
+      {
+        content: '<img src="/src/assets/imgs/LogoExample.png">',
+      }, {
+        content: '<img src="/src/assets/imgs/LogoExample.png">'
+      }, {
+        content: '<img src="/src/assets/imgs/LogoExample.png">'
+      }, {
+        content: '<img src="/src/assets/imgs/LogoExample.png">'
+      }, {
+        content: '<img src="/src/assets/imgs/LogoExample.png">'
+      }, {
+        content: '<img src="/src/assets/imgs/LogoExample.png">'
+      }, {
+        content: '<img src="/src/assets/imgs/LogoExample.png">'
+      }
+    ]
+  })
 };
 </script>
 
@@ -59,7 +84,29 @@ export default {
       </div>
     </div>
     <div class="page-body secondary">
-      
+      <div class="sponsors">
+        <h3 class="title">
+          Our Partners & Sponsors
+        </h3>
+        <vueper-slides 
+          autoplay
+          class="no-shadow" 
+          :slideMultiple="false"
+          :pauseOnHover="false"
+          :pauseOnTouch="true"
+          :arrows="false"
+          :bullets="false"
+          :touchable="true"
+          :duration="4000"
+          :visibleSlides="4"
+          :infinite="true"
+          :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }
+          ">
+
+          <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title" :content="slide.content"/>
+
+        </vueper-slides>
+      </div>
     </div>
   </div>
   <Footer/>

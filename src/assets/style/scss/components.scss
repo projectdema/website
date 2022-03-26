@@ -7,7 +7,7 @@
     user-select: none;
 
     position: relative;
-    z-index: 99999;
+    z-index: 500;
 
     .itself {
         position: absolute;
@@ -115,6 +115,10 @@
                 &:hover {
                     opacity: var(--strong-shadow);
                 }
+            }
+
+            .icon {
+                opacity: var(--strong-shadow);
             }
         }
     }
@@ -565,6 +569,38 @@
 
     .btn-line {
         margin-top: 1rem;
+    }
+}
+
+.sponsors {
+    .vueperslides__track {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .vueperslides__parallax-wrapper {
+        height: 100px;
+        padding-bottom: 0 !important;
+        overflow: hidden;
+    }
+
+    .vueperslide__content {
+        height: 250px;
+        img {
+            height: 250px;
+            object-fit: cover;
+            margin-left: 20%;
+            width: 70%;
+        }
+    }
+
+    .title {
+        text-align: center;
+        margin-top: -15px;
+        font-family: $ff-primary;
+        font-size: $ff-size-primary2 / 2;
+        opacity: var(--strong-shadow);
+        font-weight: $ff-weight-semi;
     }
 }
 
