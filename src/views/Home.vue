@@ -50,7 +50,7 @@ export default {
   <div class="page home">
     <div class="page-header" id="page-header">
       <div class="header-left">
-        <img class="header-banner" src="/svgs/collab.svg" style=""/>
+        <img class="header-banner" src="/svgs/collab.svg"/>
       </div>
       <div class="center-y header-right">
         <div class="text-box center-it">

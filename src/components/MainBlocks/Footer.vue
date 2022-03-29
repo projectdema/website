@@ -58,7 +58,7 @@ export default {
                 <ul class="box">
                     <li><router-link to="/"><span class="icon"><i class="fa-solid fa-gavel"></i></span> <span>Privacy Policy</span></router-link></li>
                     <li><router-link to="/"><span class="icon"><i class="fa-solid fa-book-open"></i></span> <span>Terms of Use</span></router-link></li>
-                    <li><router-link to="/"><span class="icon"><i class="fa-solid fa-folder"></i></span> <span>Credits</span></router-link></li>
+                    <li><router-link to="/credits"><span class="icon"><i class="fa-solid fa-folder"></i></span> <span>Credits</span></router-link></li>
                 </ul>
             </div>
         </div>

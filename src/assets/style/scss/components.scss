@@ -604,6 +604,102 @@
     }
 }
 
+.credits {
+    .personel {
+
+        .personel-category {
+            
+            padding-bottom: 15px;
+
+            &:not(:first-child) {
+                margin-top: 50px;
+            }
+
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .personel-category-title {
+                margin-left: 25px;
+                font-size: $ff-size-primary2 / 1.25;
+
+                .icon {
+                    opacity: var(--strong-shadow);
+                }
+            }
+
+            .personel-category-description {
+                margin-left: 25px;
+                opacity: var(--shadow);
+                max-width: 80ch;
+            }
+
+            .person {
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                transition: transform .3s ease-in-out;
+
+                border-radius: $border-radius;
+                float: left;
+                
+                width: calc(25% - 31px);
+
+                margin-top: 15px !important;
+                margin-left: 25px !important;
+
+                
+                margin: 0 auto;
+                text-align: center;
+
+                .inner {
+                    padding: 15px;
+                }
+
+                .avatar {
+                    margin: 0 auto;
+                    height: 150px;
+                    width: 150px !important;
+                    object-fit: cover;
+                    border-radius: $border-radius;
+                }
+
+                .name {
+                    margin-top: 15px;
+                    font-size: $ff-size-primary2 / 1.75;
+                }
+
+                .sm {
+                    transition: opacity .2s ease-in-out;
+
+                    &:not(:first-child) {
+                        margin-left: 1ch;
+                    }
+
+                    &:hover {
+                        opacity: var(--shadow);
+                    }
+                }
+
+                .btn {
+                    margin-top: 15px;
+                    width: 100%;
+                    opacity: var(--shadow);
+                    margin-left: 0;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

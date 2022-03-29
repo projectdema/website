@@ -17,7 +17,14 @@ const router = createRouter({
     {
       path: "/researches",
       name: "Researches",
+      // @ts-ignore
+      navbar: true,
       component: () => import("../views/Researches.vue"),
+    },
+    {
+      path: "/credits",
+      name: "Credits",
+      component: () => import("../views/Credits.vue"),
     }
   ],
 });

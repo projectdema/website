@@ -6,12 +6,12 @@
       </li>
 
       <template v-for="route in $router.options.routes" :key="route.path">
-        <div v-if="!['Login', 'Home'].includes(route.name)">
+        <div v-if="route.navbar">
           <li>
             <router-link class="navbar-link" :to="route.path">{{ route.name }}</router-link>
           </li>
         </div>
-        <div v-else-if="!['Home'].includes(route.name)">
+        <div v-else-if="['Login'].includes(route.name)">
           <li style="float: right">
             <router-link class="navbar-link" :to="route.path">{{ route.name }}</router-link>
           </li>
